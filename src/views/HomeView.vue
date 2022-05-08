@@ -5,7 +5,7 @@
 			<div class="row" v-if="!loading">
 				<div
 					class="item"
-					v-for="character in allData"
+					v-for="character in items"
 					:key="character.id"
 				>
 					{{ character.name }}
@@ -17,17 +17,14 @@
 </template>
 
 <script>
-import { mapGetters, mapActions, mapState } from 'vuex';
+import { mapActions, mapState } from 'vuex';
 export default {
 	name: 'HomeView',
 	data() {
-		return {
-			isLoading: '',
-		};
+		return {};
 	},
 	components: {},
 	computed: {
-		...mapGetters(['allData']),
 		...mapState({
 			items: (state) => state['characters'].data,
 			loading: (state) => state['characters'].isLoading,
