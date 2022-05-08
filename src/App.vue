@@ -1,11 +1,21 @@
 <template>
-	<div id="app">
-		<nav>
-			<router-link to="/">Home</router-link> |
-			<router-link to="/about">About</router-link>
-		</nav>
-		<router-view />
-	</div>
+	<v-app>
+		<NavBar />
+
+		<v-main class="grey lighten-3">
+			<div class="ma-4">
+				<router-view />
+			</div>
+		</v-main>
+	</v-app>
 </template>
 
-<style lang="scss"></style>
+<script>
+import NavBar from '@/components/NavBar';
+export default {
+	name: 'App',
+	components: {
+		NavBar,
+	},
+};
+</script>
