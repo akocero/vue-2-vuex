@@ -2,6 +2,7 @@
 	<v-card class="characters pa-4" flat>
 		<h3>Characters</h3>
 		<v-icon @click="refresh()">mdi-refresh</v-icon>
+		<v-btn color="primary" to="characters/create">New</v-btn>
 		<v-row v-if="!loading">
 			<v-col
 				cols="12"
@@ -15,8 +16,6 @@
 			</v-col>
 		</v-row>
 		<div v-else>Loading...</div>
-
-		<v-btn color="success" @click="storeData">Save</v-btn>
 	</v-card>
 </template>
 

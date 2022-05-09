@@ -1,9 +1,12 @@
 export default {
-	setData: (state, data) => {
+	SET_DATA: (state, data) => {
 		return (state.data = data);
 	},
-	setLoading: (state, data) => {
-		console.log(state.isLoading);
+	SET_LOADING: (state, data) => {
 		return (state.isLoading = data);
 	},
+	SET_ERROR: (state, data) => {
+		return (state.error = data);
+	},
+	ADD_DATA: (state, item) => state.data.unshift(item),
 };

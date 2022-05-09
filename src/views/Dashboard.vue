@@ -15,8 +15,6 @@
 			</v-col>
 		</v-row>
 		<div v-else>Loading...</div>
-
-		<v-btn color="success" @click="storeData">Save</v-btn>
 	</v-card>
 </template>
 

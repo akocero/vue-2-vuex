@@ -15,6 +15,11 @@ const routes = [
 		component: () => import('../views/characters/index.vue'),
 	},
 	{
+		path: '/characters/create',
+		name: 'characters.create',
+		component: () => import('../views/characters/create/index.vue'),
+	},
+	{
 		path: '/families',
 		name: 'families',
 		component: () => import('../views/Families.vue'),
