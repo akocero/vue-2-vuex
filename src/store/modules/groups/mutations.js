@@ -6,4 +6,7 @@ export default {
 		console.log(state.isLoading);
 		return (state.isLoading = data);
 	},
+	store(state, data) {
+		console.log('mutating store', data);
+	},
 };

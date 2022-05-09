@@ -12,7 +12,7 @@ const routes = [
 	{
 		path: '/characters',
 		name: 'characters',
-		component: () => import('../views/Characters.vue'),
+		component: () => import('../views/characters/index.vue'),
 	},
 	{
 		path: '/families',
@@ -22,7 +22,7 @@ const routes = [
 	{
 		path: '/groups',
 		name: 'groups',
-		component: () => import('../views/Groups.vue'),
+		component: () => import('../views/groups/index.vue'),
 	},
 ];
 

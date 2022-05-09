@@ -18,4 +18,8 @@ export default {
 			commit('setLoading', false);
 		}
 	},
+	storeData({ commit }) {
+		commit('store', { data: 'pay na' });
+		console.log('Storing Data...');
+	},
 };

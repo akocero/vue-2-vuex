@@ -1,6 +1,6 @@
 <template>
-	<v-card flat class="dashboard pa-4">
-		<h3>Dashboard</h3>
+	<v-card class="groups pa-4" flat>
+		<h3>groups</h3>
 		<v-icon @click="refresh()">mdi-refresh</v-icon>
 		<v-row v-if="!loading">
 			<v-col
@@ -24,10 +24,12 @@
 import initStore from '@/mixins/initStore.js';
 
 export default {
-	mixins: [initStore('characters')],
+	mixins: [initStore('groups')],
 	data() {
 		return {};
 	},
 	components: {},
 };
 </script>
+
+<style></style>

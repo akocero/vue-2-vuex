@@ -1,6 +1,6 @@
 <template>
-	<v-card flat class="dashboard pa-4">
-		<h3>Dashboard</h3>
+	<v-card class="characters pa-4" flat>
+		<h3>Characters</h3>
 		<v-icon @click="refresh()">mdi-refresh</v-icon>
 		<v-row v-if="!loading">
 			<v-col
@@ -31,3 +31,5 @@ export default {
 	components: {},
 };
 </script>
+
+<style></style>
