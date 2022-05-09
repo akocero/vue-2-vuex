@@ -6,9 +6,8 @@
 			<v-toolbar-title>HxH AdminPanel</v-toolbar-title>
 
 			<v-spacer></v-spacer>
-			<v-btn color="success">text</v-btn>
 			<v-btn icon>
-				<v-icon>mdi-exit</v-icon>
+				<v-icon>mdi-logout</v-icon>
 			</v-btn>
 		</v-app-bar>
 
@@ -102,7 +101,7 @@ export default {
 		};
 	},
 	mounted() {
-		console.log(this.drawer);
+		// console.log(this.drawer);
 	},
 };
 </script>

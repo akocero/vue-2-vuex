@@ -1,6 +1,6 @@
 <template>
 	<v-card flat class="dashboard pa-4">
-		<h1>Dashboard</h1>
+		<h3>Dashboard</h3>
 		<v-icon @click="refresh()">mdi-refresh</v-icon>
 		<v-row v-if="!loading">
 			<v-col
@@ -32,15 +32,15 @@ export default {
 		}),
 	},
 	methods: {
-		...mapActions(['getData']),
+		...mapActions({
+			getData: 'characters/getData',
+		}),
 		refresh() {
 			this.getData();
 		},
 	},
 	created() {
-		if (!this.items.length) {
-			this.getData();
-		}
+		this.getData();
 	},
 };
 </script>

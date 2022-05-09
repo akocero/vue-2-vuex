@@ -16,21 +16,28 @@ export default {
 		setData: (state, data) => {
 			return (state.data = data);
 		},
+		setLoading: (state, data) => {
+			console.log(state.isLoading);
+			return (state.isLoading = data);
+		},
 	},
 	actions: {
 		// for actions like fetching data or async functions
 		async getData({ commit, state }) {
-			state.isLoading = true;
+			// state.isLoading = true;
+			commit('setLoading', true);
 			try {
 				const { data } = await axios.get(
 					'http://hxh-api.herokuapp.com/api/characters'
 				);
 
 				commit('setData', data);
-				state.isLoading = false;
+				commit('setLoading', false);
+				// state.isLoading = false;
 			} catch (error) {
 				console.log(error);
-				state.isLoading = false;
+				// state.isLoading = false;
+				commit('setLoading', false);
 			}
 		},
 	},
