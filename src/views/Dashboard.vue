@@ -27,13 +27,13 @@ export default {
 	components: {},
 	computed: {
 		...mapState({
-			items: (state) => state['characters'].data,
-			loading: (state) => state['characters'].isLoading,
+			items: (state) => state['groups'].data,
+			loading: (state) => state['groups'].isLoading,
 		}),
 	},
 	methods: {
 		...mapActions({
-			getData: 'characters/getData',
+			getData: 'groups/getData',
 		}),
 		refresh() {
 			this.getData();
